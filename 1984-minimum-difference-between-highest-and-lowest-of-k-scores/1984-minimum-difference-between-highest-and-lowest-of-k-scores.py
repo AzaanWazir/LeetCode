@@ -3,7 +3,7 @@ class Solution:
         if k == 1:
             return 0
         
-        nums = sorted(nums)
+        nums.sort()
         left = 0
         right = left + k - 1
         minimum = nums[right] - nums[left]
