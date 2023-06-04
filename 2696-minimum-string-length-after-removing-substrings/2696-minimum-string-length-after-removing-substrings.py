@@ -1,15 +1,11 @@
 class Solution:
     def minLength(self, s: str) -> int:
-        currentLeft = 0
-        while (currentLeft < len(s)-1):
-            currentRight = currentLeft + 1
-            if s[currentLeft] == "A" and s[currentRight] == "B":
-                s = s[:currentLeft] + s[currentRight + 1:]
-                currentLeft = currentLeft - 2 if currentLeft - 2 >= 0 else 0
-                continue
-            if s[currentLeft] == "C" and s[currentRight] == "D":
-                s = s[:currentLeft] + s[currentRight + 1:]
-                currentLeft = currentLeft - 2 if currentLeft - 2 >= 0 else 0
-                continue
-            currentLeft += 1
-        return len(s)
+        word = []
+        for letter in s:
+            word.append(letter)
+            if len(word) >= 2:
+                if word[-1] == "B" and word[-2] == "A":
+                    word = word[:-2]
+                elif word[-1] == "D" and word[-2] == "C":
+                    word = word[:-2]
+        return len(word)
