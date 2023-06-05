@@ -47,13 +47,10 @@ class Solution:
                 boxNum = getBox(i, j)
                 
                 if num in columns[i]:
-                    print("BOOM")
                     return False
                 if num in rows[j]:
-                    print("BONG")
                     return False
                 if num in boxes[boxNum]:
-                    print("BING")
                     return False
                 columns[i].add(num)
                 rows[j].add(num)
