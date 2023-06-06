@@ -18,12 +18,15 @@ class Solution:
             
             runningIndex = 0
             currentLetterIndex = 0
+            
             while (runningIndex < len(s)):
                 if s[runningIndex] == word[currentLetterIndex]:
                     currentLetterIndex += 1
                 runningIndex += 1
+                
                 if currentLetterIndex == len(word):
                     break
+                    
             if currentLetterIndex == len(word):
                 ans = word
         return ans
