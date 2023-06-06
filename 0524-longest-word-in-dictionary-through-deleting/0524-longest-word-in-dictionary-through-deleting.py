@@ -19,11 +19,10 @@ class Solution:
             runningIndex = 0
             currentLetterIndex = 0
             
-            while (runningIndex < len(s)):
-                if s[runningIndex] == word[currentLetterIndex]:
+            for letter in s:
+                if letter == word[currentLetterIndex]:
                     currentLetterIndex += 1
-                runningIndex += 1
-                
+                    
                 if currentLetterIndex == len(word):
                     break
                     
