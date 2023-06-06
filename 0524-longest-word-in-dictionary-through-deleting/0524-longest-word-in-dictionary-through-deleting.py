@@ -6,10 +6,12 @@ class Solution:
             #Go through s letter by letter and see if we can respell the word
             
         ans = ""
-        dictionary.sort()
         for word in dictionary:
-            if len(word) <= len(ans):
+            if len(word) < len(ans):
                 continue
+            if len(word) == len(ans):
+                if word > ans:
+                    continue
             if len(word) > len(s):
                 continue
             runningIndex = 0
