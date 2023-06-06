@@ -14,6 +14,8 @@ class Solution:
                     continue
             if len(word) > len(s):
                 continue
+                
+            
             runningIndex = 0
             currentLetterIndex = 0
             while (runningIndex < len(s)):
