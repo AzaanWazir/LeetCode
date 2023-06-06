@@ -1,17 +1,20 @@
 class Solution:
     def minimizeMax(self, nums: List[int], p: int) -> int:
-        nums.sort()
-    
         if p == 0:
             return 0
+        
+        nums.sort()
     
         def canMakeDiff(diff):
-            i = 1
             validPairs = 0
-            while (i < len(nums)):
+            skip = False
+            for i in range(len(nums)):
+                if skip:
+                    skip = False
+                    continue
                 if (abs(nums[i-1] - nums[i]) <= diff):
                     validPairs += 1
-                    i += 1
+                    skip = True
                 i += 1
                 if validPairs == p:
                     return True
