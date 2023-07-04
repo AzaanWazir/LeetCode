@@ -56,5 +56,5 @@ class Solution:
                 count += 1
             ans += sum(queue.values()) * multiplier
             ans = ans % (10**9 + 7)
-        return ans % (10**9 + 7)
+        return ans
             
