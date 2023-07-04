@@ -4,7 +4,6 @@ class Solution:
         right = len(asc) - 1
         left = len(asc) - 2
         ans = 0
-        print(asc)
         while (left >= 0):
             if asc[right] > asc[left]:
                 right -= 1
